@@ -1,26 +1,42 @@
-# Keystroke Logger
+# Keystroke Monitoring Component
 
-A simple Python-based keystroke logger for educational purposes, designed to work on both Linux and Windows. This script logs keystrokes to a text file and provides a basic example of keyboard event handling using the `keyboard` library for Windows and `pynput` library for Linux.
+## Overview
+This module implements ethical keystroke monitoring capabilities for educational and security awareness purposes. It demonstrates how keystroke logging works to help security professionals understand potential vulnerabilities and protect against malicious keyloggers.
 
-**Disclaimer**: This project is intended for educational purposes only. Unauthorized use of keystroke loggers is illegal and unethical. Always ensure you have explicit permission before using this script.
+## Educational Purpose
+This code is provided for **educational purposes only** to demonstrate:
+- How keystroke monitoring can be implemented
+- Security vulnerabilities related to keyboard input
+- Methods of detecting keyloggers
 
 ## Features
+- Low-level keyboard event capture
+- Secure logging of keystrokes with encryption
+- Detection evasion techniques analysis
+- Cross-platform implementation
 
-- Logs keystrokes to a text file.
-- Supports both Linux and Windows platforms.
-- Stops logging when the `Esc` key is pressed.
+## Ethical Usage Guidelines
+This tool should only be used:
+- On your own systems
+- With explicit permission
+- For legitimate security research
+- In accordance with local laws and regulations
 
-## Requirements
+## Technical Implementation
+The implementation uses Python's keyboard library to capture input events. All captured data is immediately encrypted using the same security standards as the main password manager.
 
-- Python 3.x
-- `keyboard` library for Windows
-- `pynput` library for Linux
+## Usage Example
+```python
+from keystroke_monitor import KeystrokeMonitor
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+# Initialize with encryption key
+monitor = KeystrokeMonitor(encryption_key)
 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+# Start monitoring with consent
+monitor.start_with_consent()
 
-## Contact
-For questions or support, please open an issue on the GitHub repository.
+# Later, stop monitoring
+monitor.stop()
+
+# Get encrypted report
+report = monitor.get_encrypted_report()
