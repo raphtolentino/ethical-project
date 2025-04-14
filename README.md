@@ -1,53 +1,31 @@
-# Ethical Project README
+# Ethical Hacking Password Manager
 
-## Overview
-The Ethical Project is a collection of two separate projects: **Keystroke Logger** and **Password Generator**. These tools are designed to provide educational examples of keyboard event handling and password generation, respectively.
+## Project Overview
+A secure command-line password manager developed as part of an ethical hacking project. This application allows users to create, store, and manage encrypted passwords locally, enhancing security by keeping sensitive data off cloud servers.
 
-## Keystroke Logger
--------------------
+## Features
+- Secure password generation with customizable complexity
+- Local encryption of stored passwords
+- Command-line interface for easy management
+- User authentication to protect stored passwords
+- Password strength evaluation
 
-### Features
+## Technologies Used
+- Python 3.x
+- Cryptography library for encryption
+- Argparse for CLI argument parsing
+- SQLite for local database storage
 
-* Logs keystrokes to a text file.
-* Supports both Linux and Windows platforms.
-* Stops logging when the Esc key is pressed.
-* File can be viewed.
+## Installation & Setup
+```bash
+# Clone the repository
+git clone https://github.com/raphtolentino/ethical-project
 
-### Technical Details
+# Navigate to the project directory
+cd ethical-project
 
-* Language: Python
-* Libraries: `keyboard` library for Windows and `pynput` library for Linux
+# Install dependencies
+pip install -r requirements.txt
 
-## Password Generator
-----------------------
-
-### Features
-
-* Generates strong, unique passwords based on user input (e.g., password length, character types).
-* Allows users to choose from various character sets, including uppercase letters, lowercase letters, digits, and special characters.
-* Provides feedback on the generated password's strength.
-
-### Technical Details
-
-* Language: Python
-* Libraries: `random` and `string` libraries for generating random characters and manipulating strings, respectively
-
-## Usage
-
-1. Clone the repository: `git clone https://github.com/raphtolentino/ethical.project/tree/main/password.generator`
-2. Run the script: `python password_generator.py`
-
-## Contributing
-
-* Issues: Create issues to track bugs, feature requests, or questions related to the project.
-* Pull Requests: Submit pull requests to contribute code changes or improvements to the project.
-* Code of Conduct: Adhere to the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) guide for maintaining a respectful and inclusive community.
-
-## License
-
-The project is licensed under the MIT License. See the `LICENSE.txt` file for details.
-
-## Disclaimer
-
-This project is intended for educational purposes only. Unauthorized use of keystroke loggers or password generators is illegal and unethical. Always ensure you have explicit permission before using these tools.
-
+# Run the application
+python password_manager.py
